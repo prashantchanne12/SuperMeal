@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  height: 85vh;
+  width: 70vw;
+  background-image: url("../images/landing-2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 1rem;
+  z-index: -1;
+}
+
+.color {
+  position: absolute;
+  right: 0;
+  height: 80vh;
+  width: 70vw;
+  z-index: -2;
+  border-top-left-radius: 1rem;
+  background-color: #e7f7f7;
+}
+
+.text {
+  position: absolute;
+  left: 5rem;
+  top: 20vh;
+  z-index: 1;
+}
+
+.text .title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 6.5rem;
+  color: #1db6b6;
+}
+
+.text .subtitle {
+  padding-top: 1.5rem;
+}
+
+.text .subtitle p {
+  font-size: 1.5rem;
+  color: grey;
+  font-weight: bold;
+}
+
+.text button {
+  cursor: pointer;
+  border: 0;
+  padding: 0.7rem 1rem;
+  color: #1db6b6;
+  background: #fff;
+  font-size: 1.2rem;
+  border: 1px solid #1db6b6;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.text button:hover {
+  background: #1db6b6;
+  color: #fff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navbar {
+  position: absolute;
+  top: 1rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .nav-title {
+  padding-left: 1rem;
+  font-size: 2rem;
+  color: #1db6b6;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.navbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 55vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  top: 90vh;
+  width: 100%;
+  height: 60px;
+  color: grey;
+  left: 0;
+}
+
+.footer .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 3rem;
+  padding-top: 1rem;
+}
+
+.footer .logos i {
+  cursor: pointer;
+  padding-left: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
