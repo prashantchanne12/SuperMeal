@@ -8,8 +8,15 @@
 
 $primary-color: #1db6b6;
 
+.location {
+  padding-top: 1rem;
+  margin-left: 2rem;
+  font-weight: bold;
+  color: grey;
+}
+
 .hotels {
-  padding-top: 2rem;
+  padding-top: 0.5rem;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   grid-gap: 1.5rem;

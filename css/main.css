@@ -112,7 +112,7 @@ a {
           justify-content: space-between;
 }
 
-.navbar .nav-title {
+.navbar .nav-title a {
   padding-left: 1rem;
   font-size: 2rem;
   color: #1db6b6;

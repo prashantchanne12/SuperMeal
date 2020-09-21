@@ -1,5 +1,5 @@
 const hotelsPage = document.querySelector('.hotels');
-
+const locationTitle = document.querySelector('.location');
 
 
 class NearBy {
@@ -53,11 +53,14 @@ class NearBy {
 
     createHotelCards = ({ restraurants, location }) => {
 
+        locationTitle.innerHTML = `Your Loctaion ${location}`;
+    
+
         restraurants.forEach(hotel => {
 
 
             const hotelCard = document.createElement('div');
-            hotelCard.id = hotel.restaurant.res_id;
+            hotelCard.id = hotel.restaurant.R.res_id;
             hotelCard.classList.add('hotel-card');
 
             const imgSrc = hotel.restaurant.thumb.toString().length !== 0 ? hotel.restaurant.thumb : '../images/landing-1.webp';
