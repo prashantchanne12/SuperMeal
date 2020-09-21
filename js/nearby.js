@@ -2,6 +2,26 @@ const hotelsPage = document.querySelector('.hotels');
 const locationTitle = document.querySelector('.location');
 
 
+hotelsPage.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (e.target.classList.contains('img')) {
+        const currentHotel = e.target.parentElement.id;
+        gotoHotelPage(currentHotel);
+    }
+    if (e.target.classList.contains('view')) {
+        const currentHotel = e.target.parentElement.parentElement.id;
+        gotoHotelPage(currentHotel);
+
+
+    }
+});
+
+const gotoHotelPage = (currentHotel) => {
+    localStorage.setItem('currentHotel', currentHotel);
+    window.location.replace('../pages/hotel.html');
+}
+
 class NearBy {
     options = {
         method: "GET",
@@ -54,7 +74,7 @@ class NearBy {
     createHotelCards = ({ restraurants, location }) => {
 
         locationTitle.innerHTML = `Your Loctaion ${location}`;
-    
+
 
         restraurants.forEach(hotel => {
 
@@ -65,10 +85,12 @@ class NearBy {
 
             const imgSrc = hotel.restaurant.thumb.toString().length !== 0 ? hotel.restaurant.thumb : '../images/landing-1.webp';
 
+            // const cusions =  ;
+
 
 
             hotelCard.innerHTML = `
-            <img src=${imgSrc} alt="">
+            <img src=${imgSrc} alt="" class="img">
             <div class="hotel-details">
                 <div class="title">
                     <p class="name">${hotel.restaurant.name}</p>
@@ -84,11 +106,15 @@ class NearBy {
                 </div>
 
                 <p class="cusions-text">
-                ${hotel.restaurant.cuisines}
+                ${hotel.restaurant.cuisines.toString().split(',').length >= 2 ? `${hotel.restaurant.cuisines.split(',')[0]} ${hotel.restaurant.cuisines.split(',')[1]}` : `${hotel.restaurant.cuisines.split(',')[0]}`
+                }
                 </p>
 
-                <p class="address">${hotel.restaurant.location.address}</p>
-            </div>`;
+                <p class="address">${hotel.restaurant.location.address.toString().substring(0, 50)}....</p>
+
+                <p class="view">View</p>
+            </div>`
+                ;
 
             hotelsPage.appendChild(hotelCard);
 
@@ -101,40 +127,26 @@ const nearBy = new NearBy();
 nearBy.getLatLong(async (positions) => {
     let { lat, long } = positions;
 
-    const { zone, id } = await nearBy.getEntityAndZone(`https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`);
+    if (localStorage.getItem('lat') == lat && localStorage.getItem('long') == long) {
+        nearBy.createHotelCards(JSON.parse(localStorage.getItem('data')));
+    } else {
 
-    const { restraurants, location } = await nearBy.getNearByRestraurants(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${id}&entity_type=${zone}
+        console.log('Fetching new data.....');
+
+        localStorage.setItem('lat', lat);
+        localStorage.setItem('long', long);
+
+
+        const { zone, id } = await nearBy.getEntityAndZone(`https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`);
+
+        const { restraurants, location } = await nearBy.getNearByRestraurants(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${id}&entity_type=${zone}
     `);
 
-    nearBy.createHotelCards({ restraurants, location });
+        let data = { restraurants, location };
+        localStorage.setItem('data', JSON.stringify(data));
+
+        nearBy.createHotelCards({ restraurants, location });
+    }
+
 
 });
-
-
-
-
-
-/*  <div class="hotel-card">
-                <img src="../images/landing-1.webp" alt="">
-                <div class="hotel-details">
-                    <div class="title">
-                        <p class="name">Hotel Maria</p>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-
-                    <div class="cusions">
-                        <i class="fa fa-dot-circle-o"></i>
-                        <p>Cusions</p>
-                    </div>
-
-                    <p class="cusions-text">
-                        Modern Indian, Maharashtrian
-                        Modern Indian, Maharashtrian
-                    </p>
-
-                    <p class="address">Bandra Kurla Complex, Mumbai</p>
-                </div>
-            </div>*/

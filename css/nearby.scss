@@ -22,7 +22,7 @@ $primary-color: #1db6b6;
   grid-gap: 1.5rem;
 
   .hotel-card {
-    cursor: pointer;
+    position: relative;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,7 @@ $primary-color: #1db6b6;
     transition: transform 0.3s ease-in-out;
 
     img {
+      cursor: pointer;
       width: 250px;
       height: 200px;
       border-radius: 0.5rem;
@@ -43,6 +44,7 @@ $primary-color: #1db6b6;
     .hotel-details {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
 
       .title {
         display: flex;
@@ -67,7 +69,7 @@ $primary-color: #1db6b6;
       }
 
       .cusions {
-        padding-top: 0.7rem;
+        padding-top: 1rem;
         font-size: 0.95rem;
         display: flex;
 
@@ -84,18 +86,39 @@ $primary-color: #1db6b6;
 
       .cusions-text {
         padding-top: 0.6rem;
+        padding-left: 2px;
         font-size: 0.8rem;
       }
 
       .address {
         padding-top: 0.7rem;
-        font-size: 0.8rem;
+        padding-bottom: 0.7rem;
+        font-size: 0.7rem;
         color: grey;
       }
     }
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    .view {
+      cursor: pointer;
+      position: absolute;
+      bottom: 0.7rem;
+      right: 0.7rem;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid #1db6b65b;
+      border-radius: 2rem;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
     }
   }
 }
