@@ -1,0 +1,59 @@
+.navbar {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+$primary-color: #1db6b6;
+
+.hotels {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-gap: 1.5rem;
+
+  .hotel-card {
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #1db6b65b;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+      width: 250px;
+      height: 200px;
+      border-radius: 0.5rem;
+      background-size: cover;
+    }
+
+    .hotel-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        font-weight: bold;
+        padding-top: 0.7rem;
+        font-size: 1.2rem;
+      }
+
+      .desc {
+        padding-top: 0.7rem;
+        padding-left: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
