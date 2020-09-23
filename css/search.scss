@@ -1,7 +1,8 @@
 $primary-color: #1db6b6;
 
 .container {
-  max-width: 960px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -29,7 +30,7 @@ $primary-color: #1db6b6;
     width: 150px;
     text-overflow: "";
     text-align: center;
-    text-indent: 1.5rem;
+    text-indent: 0.85rem;
   }
 
   form {
@@ -40,7 +41,7 @@ $primary-color: #1db6b6;
       font-size: 1.2rem;
       padding: 10px 10px 10px 5px;
       display: block;
-      width: 500px;
+      width: 650px;
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $primary-color;
@@ -48,6 +49,98 @@ $primary-color: #1db6b6;
 
       &:focus {
         outline: none;
+      }
+    }
+  }
+}
+
+.hotel-search {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .hotel-card {
+    margin-top: 1rem;
+    padding: 1rem 0.7rem;
+    border: 1px solid #1db6b65b;
+    position: relative;
+    display: flex;
+    border-radius: 1rem;
+
+    img {
+      height: 170px;
+      width: 180px;
+      border-radius: 1rem;
+    }
+
+    .details {
+      padding-left: 1rem;
+
+      .name {
+        cursor: pointer;
+        padding-top: 0.2rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      .locality {
+        padding-top: 0.5rem;
+        font-size: 0.95rem;
+        color: grey;
+      }
+
+      .address {
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #444;
+      }
+
+      .cusions {
+        margin-top: 0.9rem;
+      }
+
+      .cusions,
+      .cost {
+        padding-top: 0.7rem;
+        display: flex;
+
+        p:first-child {
+          font-weight: bold;
+        }
+
+        p:nth-child(2) {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+
+    .ratings {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      p:first-child {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 50px;
+        background-color: $primary-color;
+        color: #fff;
+        text-align: center;
+        font-size: 1.05rem;
+        padding: 0.4rem 0.3rem;
+        border-radius: 0.5rem;
+      }
+
+      p:nth-child(2) {
+        position: absolute;
+        top: 3rem;
+        right: 1rem;
+        padding-top: 0.5rem;
+        font-size: 0.9rem;
+        color: grey;
       }
     }
   }
