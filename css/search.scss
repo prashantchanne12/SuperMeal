@@ -1,0 +1,54 @@
+$primary-color: #1db6b6;
+
+.container {
+  max-width: 960px;
+}
+
+.navbar {
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  #country {
+    border: 1px solid $primary-color;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem 0.8rem;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 150px;
+    text-overflow: "";
+    text-align: center;
+    text-indent: 1.5rem;
+  }
+
+  form {
+    margin-left: 2rem;
+    input {
+      background: none;
+      background-color: white;
+      font-size: 1.2rem;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 500px;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $primary-color;
+      margin: 25px 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.container {
+  max-width: 960px;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper #country {
+  border: 1px solid #1db6b6;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  padding: 1rem 0.8rem;
+}
+
+.wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 150px;
+  text-overflow: "";
+  text-align: center;
+  text-indent: 1.5rem;
+}
+
+.wrapper form {
+  margin-left: 2rem;
+}
+
+.wrapper form input {
+  background: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #1db6b6;
+  margin: 25px 0;
+}
+
+.wrapper form input:focus {
+  outline: none;
+}
+/*# sourceMappingURL=search.css.map */
