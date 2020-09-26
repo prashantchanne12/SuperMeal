@@ -16,7 +16,7 @@
             <h2>Login</h2>
 
             <form action="../includes/login-auth.php" method="post">
-                <input type="text" name="email" id="email" placeholder="Email Id" required>
+                <input type="text" name="email_uid" id="email" placeholder="Username or Email Id" required>
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <button type="submit" name="login-submit">Log In</button>
             </form>
