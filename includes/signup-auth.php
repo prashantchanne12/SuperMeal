@@ -22,7 +22,7 @@ if (isset($_POST['signup-submit'])) {
         header("Location: ../pages/signup.php?error=invaliduid");
         exit();
     } else if ($password !== $confirmPassword) {
-        header("Location: ../pages/signup.php?error=passwordcheck&email=" . $email . "uid" . $username);
+        header("Location: ../pages/signup.php?error=passwordcheck&email=" . $email . "&uid=" . $username);
         exit();
     } else {
 

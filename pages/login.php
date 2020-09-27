@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 
+<style>
+    .error {
+        color: #fff;
+        font-size: 0.8rem;
+        background-color: #e74c3c;
+        margin-top: 0.8rem;
+        margin-left: 3px;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+    }
+</style>
+
+
 <body>
     <div class="container">
 
         <div class="login-form">
             <h2>Login</h2>
+
+            <?php
+            if (isset($_GET['error'])) {
+                if (isset($_GET['error']) == 'wrongpassword') {
+                    echo '<p class="error">*Invalid username or password</p>';
+                }
+            } ?>
 
             <form action="../includes/login-auth.php" method="post">
                 <input type="text" name="email_uid" id="email" placeholder="Username or Email Id" required>
