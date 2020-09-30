@@ -127,26 +127,29 @@ const nearBy = new NearBy();
 nearBy.getLatLong(async (positions) => {
     let { lat, long } = positions;
 
-    if (localStorage.getItem('lat') == lat && localStorage.getItem('long') == long) {
-        nearBy.createHotelCards(JSON.parse(localStorage.getItem('data')));
-    } else {
+    // console.log(lat);
+    // console.log(long);
 
-        console.log('Fetching new data.....');
+    // if (localStorage.getItem('lat') == lat && localStorage.getItem('long') == long) {
+    //     nearBy.createHotelCards(JSON.parse(localStorage.getItem('data')));
+    // } else {
 
-        localStorage.setItem('lat', lat);
-        localStorage.setItem('long', long);
+    console.log('Fetching new data.....');
+
+    // localStorage.setItem('lat', lat);
+    // localStorage.setItem('long', long);
 
 
-        const { zone, id } = await nearBy.getEntityAndZone(`https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`);
+    const { zone, id } = await nearBy.getEntityAndZone(`https://developers.zomato.com/api/v2.1/geocode?lat=${lat}&lon=${long}`);
 
-        const { restraurants, location } = await nearBy.getNearByRestraurants(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${id}&entity_type=${zone}
+    const { restraurants, location } = await nearBy.getNearByRestraurants(`https://developers.zomato.com/api/v2.1/location_details?entity_id=${id}&entity_type=${zone}
     `);
+    let data = { restraurants, location };
 
-        let data = { restraurants, location };
-        localStorage.setItem('data', JSON.stringify(data));
+    localStorage.setItem('data', JSON.stringify(data));
 
-        nearBy.createHotelCards({ restraurants, location });
-    }
+    nearBy.createHotelCards({ restraurants, location });
+
 
 
 });

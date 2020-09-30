@@ -24,17 +24,17 @@ session_start();
         <div class="subtitle">
             <p>Explore meals from all over the world</p>
         </div>
-        <button class="btn">Check Out</button>
+        <button class="btn">Check Out</a></button>
     </div>
 
     <div class="color"></div>
 
     <div class="navbar">
-        <div class="nav-title"><a href="index.html">SuperMeal</a></div>
+        <div class="nav-title"><a href="index.php">SuperMeal</a></div>
         <ul class="links">
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="./pages/nearby.html">Nearby Hotels</a></li>
-            <li><a href="./pages/search.html">Search</a></li>
+            <li><a href="index.php" class="current">Home</a></li>
+            <li><a href="./pages/nearby.php">Nearby Hotels</a></li>
+            <li><a href="./pages/search.php">Search</a></li>
 
             <?php
             if (isset($_SESSION['id'])) {
