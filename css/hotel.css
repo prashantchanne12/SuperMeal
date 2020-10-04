@@ -106,10 +106,24 @@ img {
   font-weight: bold;
 }
 
-.overview {
+.active {
+  color: #1db6b6;
+}
+
+.tabs {
   padding-top: 2rem;
   padding-left: 0.5rem;
-  color: #1db6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabs h3 {
+  cursor: pointer;
+}
+
+.tabs h3:last-child {
+  padding-left: 2rem;
 }
 
 .line {

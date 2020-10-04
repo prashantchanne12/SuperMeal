@@ -1,4 +1,31 @@
 const hotelDetailsElement = document.querySelector('.hotel');
+const hotelMenuElement = document.querySelector('.menus');
+
+hotelDetailsElement.addEventListener('click', e => {
+    if (e.target.classList.contains('order-online')) {
+
+        e.target.parentElement.nextElementSibling.nextElementSibling.style = 'display:none';
+
+        e.target.classList.add('active');
+        e.target.previousElementSibling.classList.remove('active');
+
+        hotelMenuElement.style = 'display:block';
+
+        hotel.createMenuCards();
+
+    }
+
+    if (e.target.classList.contains('overview')) {
+
+        hotelMenuElement.style = 'display:none';
+
+        e.target.parentElement.nextElementSibling.nextElementSibling.style = 'display:block';
+
+        e.target.nextElementSibling.classList.remove('active');
+        e.target.classList.add('active');
+
+    }
+});
 
 class Hotel {
     options = {
@@ -58,40 +85,71 @@ class Hotel {
         <p>${hotel.timings}</p>
     </div>
 
-    <h3 class="overview">Overview</h3>
+    <div class="tabs">
+        <h3 class="overview active">Overview</h3>
+        <h3 class="order-online">Order Online</h3>
+    </div>
     <div class="line"></div>
 
-    <div class="hotel-cusions">
-        <p class="title">Top Cusions</p>
-        ${str}
-    </div>
+    <div class="overview-section">
+        <div class="hotel-cusions">
+            <p class="title">Top Cusions</p>
+            ${str}
+        </div>
 
-    <div class="avg-cost">
-        <p class="title">Average Cost for Two People</p>
-        <p> ₹ ${hotel.average_cost_for_two}</p>
-    </div>
+        <div class="avg-cost">
+            <p class="title">Average Cost for Two People</p>
+            <p> ₹ ${hotel.average_cost_for_two}</p>
+        </div>
 
-    <div class="address">
-        <p class="title">Address</p>
-        <p>${hotel.location.address}</p>
-    </div>
+        <div class="address">
+            <p class="title">Address</p>
+            <p>${hotel.location.address}</p>
+        </div>
 
-    <div class="phone-number">
-        <p class="title">Phone Number</p>
-        <p>${hotel.phone_numbers}</p>
-    </div>`;
+        <div class="phone-number">
+            <p class="title">Phone Number</p>
+            <p>${hotel.phone_numbers}</p>
+        </div>
+    </div>
+    `;
 
         hotelDetailsElement.appendChild(hotelDetails);
 
     }
+
+    createMenuCards() {
+        hotelMenuElement.innerHTML = '';
+
+        menu.forEach(data => {
+            const menuDetails = document.createElement('div');
+            menuDetails.innerHTML = `
+        <div class="menu">
+            <img src="${data.img}"
+                alt="" class="menu-img">
+            <div class="menu-details">
+                <h3 class="menu-title">${data.name}</h3>
+                <div class="menu-rating">
+                    <i class="fa fa-star"></i>
+                    <p class="ratings">${data.rating}</p>
+                    <p class="total-votes">(${data.votes})</p>
+                </div>
+                <p class="price">${data.price}</p>
+                <button class="add">Add</button>
+            </div>
+        </div>
+        <div class="line"></div>
+            `;
+
+            hotelMenuElement.appendChild(menuDetails);
+        });
+    }
 }
 
 const hotel = new Hotel();
-
 hotel.fetchHotelData(`https://developers.zomato.com/api/v2.1/restaurant?res_id=${localStorage.getItem('currentHotel')}
 `).then(data => {
     hotel.createHotelDetailsPage(data);
 }).catch(e => {
     console.log(e);
 });
-

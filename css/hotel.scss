@@ -94,10 +94,22 @@ img {
   }
 }
 
-.overview {
+.active {
+  color: $primary-color;
+}
+
+.tabs {
   padding-top: 2rem;
   padding-left: 0.5rem;
-  color: $primary-color;
+  display: flex;
+
+  h3 {
+    cursor: pointer;
+  }
+
+  h3:last-child {
+    padding-left: 2rem;
+  }
 }
 
 .line {
