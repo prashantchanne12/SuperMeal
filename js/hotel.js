@@ -1,7 +1,15 @@
 const hotelDetailsElement = document.querySelector('.hotel');
 const hotelMenuElement = document.querySelector('.menus');
 
+const cartCount = document.querySelector('.cart-count');
+
+const foo = JSON.parse(localStorage.getItem('cartItems'));
+cartCount.innerHTML = foo.length.toString();
+
+const prevCartItems = JSON.parse(localStorage.getItem('cartItems'));
+
 hotelDetailsElement.addEventListener('click', e => {
+    e.preventDefault();
     if (e.target.classList.contains('order-online')) {
 
         e.target.parentElement.nextElementSibling.nextElementSibling.style = 'display:none';
@@ -25,7 +33,32 @@ hotelDetailsElement.addEventListener('click', e => {
         e.target.classList.add('active');
 
     }
+
 });
+
+cartCount.addEventListener('click', e => {
+    e.preventDefault();
+    window.location.href = '../pages/cart.php';
+})
+
+hotelMenuElement.addEventListener('click', e => {
+    e.preventDefault();
+    if (e.target.classList.contains('add')) {
+        const id = e.target.parentElement.
+            parentElement.id;
+        addToCart(id);
+    }
+});
+
+
+const addToCart = (id) => {
+    cartCount.innerHTML = parseInt(cartCount.textContent) + 1;
+
+    prevCartItems.push(menu[id]);
+
+    localStorage.setItem('cartItems', JSON.stringify
+        (prevCartItems));
+}
 
 class Hotel {
     options = {
@@ -124,7 +157,7 @@ class Hotel {
         menu.forEach(data => {
             const menuDetails = document.createElement('div');
             menuDetails.innerHTML = `
-        <div class="menu">
+        <div class="menu" id=${data.id}>
             <img src="${data.img}"
                 alt="" class="menu-img">
             <div class="menu-details">
