@@ -1,0 +1,38 @@
+$primary-color: #1db6b6;
+
+.nav-title {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.cart-count {
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+  bottom: 12px;
+  right: 2.7rem;
+}
+
+.nav-title a {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: $primary-color;
+  font-weight: bold;
+  margin-left: 1rem;
+}
