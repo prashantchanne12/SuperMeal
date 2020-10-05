@@ -15,29 +15,32 @@ class Cart {
 
         prevCartItems.forEach(data => {
             const cartItem = document.createElement('div');
-            cartItem.innerHTML = `
-        <div class="menu" id=${data.id}>
-            <img src="${data.img}"
-                alt="" class="menu-img">
-            <div class="menu-details">
-                <h3 class="menu-title">${data.name}</h3>
-                <div class="menu-rating">
-                    <i class="fa fa-star"></i>
-                    <p class="ratings">${data.rating}</p>
-                    <p class="total-votes">(${data.votes})</p>
+            cartItem.innerHTML =
+                `<div class="menu" id=${data.id}>
+                <div class="details">
+                    <img src="${data.img}"
+                        alt="" class="menu-img">
+                    <div class="menu-details">
+                        <h3 class="menu-title">${data.name}</h3>
+                        <div class="menu-rating">
+                            <i class="fa fa-star"></i>
+                            <p class="ratings">${data.rating}</p>
+                            <p class="total-votes">(${data.votes})</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="price">${data.price}</p>
+                <div class="quantity">${data.quantity}</div>
+                <div class="price">${data.price}</div>
             </div>
-            <div class="quantity">${data.quantity}</div>
-            <div class="close">X</div>
-        </div>
-        <div class="line"></div>
-            `;
+            <div class="line"></div>
+
+`;
 
             cartItems.appendChild(cartItem);
 
         });
     }
+
 
 }
 
