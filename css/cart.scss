@@ -1,5 +1,10 @@
 $primary-color: #1db6b6;
 
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
 .nav-title {
   position: sticky;
   top: 0;
@@ -35,4 +40,73 @@ $primary-color: #1db6b6;
   color: $primary-color;
   font-weight: bold;
   margin-left: 1rem;
+}
+
+.menu {
+  display: flex;
+}
+
+.line {
+  height: 1px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  width: 90%;
+  background-color: #1db6b61e;
+}
+
+.menu img {
+  height: 130px;
+  width: 130px;
+  border-radius: 0.6rem;
+}
+
+.menu .menu-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 1.4rem;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+}
+
+.menu .menu-details .menu-rating {
+  display: flex;
+  padding-top: 0.7rem;
+}
+
+.menu .menu-details .menu-rating i {
+  color: #1db6b6;
+}
+
+.menu .menu-details .menu-rating p {
+  padding-left: 0.4rem;
+}
+
+.menu .menu-details .menu-rating p:last-child {
+  color: grey;
+}
+
+.menu .menu-details .price {
+  padding-top: 0.6rem;
+  font-weight: bold;
+}
+
+.menu .menu-details .add {
+  position: absolute;
+  right: 0;
+  top: 0.4rem;
+  cursor: pointer;
+  border: 1px solid #1db6b6;
+  outline: 0;
+  background-color: #fff;
+  color: #1db6b6;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.menu .menu-details .add:hover {
+  background-color: #1db6b6;
+  color: #fff;
 }

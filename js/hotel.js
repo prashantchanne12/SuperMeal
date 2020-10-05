@@ -6,7 +6,8 @@ const cartCount = document.querySelector('.cart-count');
 const foo = JSON.parse(localStorage.getItem('cartItems'));
 cartCount.innerHTML = foo.length.toString();
 
-const prevCartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+
 
 hotelDetailsElement.addEventListener('click', e => {
     e.preventDefault();
@@ -54,7 +55,20 @@ hotelMenuElement.addEventListener('click', e => {
 const addToCart = (id) => {
     cartCount.innerHTML = parseInt(cartCount.textContent) + 1;
 
-    prevCartItems.push(menu[id]);
+    let prevCartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+    // Check if item already exists
+    const existingCartItem = prevCartItems.find(cartItem => cartItem.id == id);
+
+    if (existingCartItem) {
+        prevCartItems = prevCartItems.map(cartItem => cartItem.id == id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem);
+    } else {
+        prevCartItems.push(menu[id - 1]);
+    }
+
+    // console.log(prevCartItems);
+
+    // prevCartItems.push(menu[id]);
 
     localStorage.setItem('cartItems', JSON.stringify
         (prevCartItems));

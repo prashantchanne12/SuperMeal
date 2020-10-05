@@ -18,6 +18,12 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="cart-items">
+
+        </div>
+    </div>
+
 
     <script src="../js/cart.js"></script>
 </body>

@@ -6,6 +6,7 @@ const menu = [
         rating: 4.5,
         votes: 380,
         price: '₹58',
+        quantity: 1,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const menu = [
         rating: 4.3,
         votes: 1100,
         price: '₹190',
+        quantity: 1,
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const menu = [
         rating: 4.2,
         votes: 100,
         price: '₹135',
+        quantity: 1,
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const menu = [
         rating: 4.6,
         votes: 500,
         price: '₹75',
+        quantity: 1,
     },
 
     {
@@ -39,6 +43,7 @@ const menu = [
         rating: 4.4,
         votes: 150,
         price: '₹74',
+        quantity: 1,
     },
     {
         id: 6,
@@ -47,6 +52,7 @@ const menu = [
         rating: 4.7,
         votes: 60,
         price: '₹65',
+        quantity: 1,
     },
     {
         id: 7,
@@ -55,6 +61,7 @@ const menu = [
         rating: 4.1,
         votes: 570,
         price: '₹65',
+        quantity: 1,
     },
     {
         id: 8,
@@ -63,6 +70,7 @@ const menu = [
         rating: 4.6,
         votes: 780,
         price: '₹80',
+        quantity: 1,
     },
     {
         id: 9,
@@ -71,6 +79,7 @@ const menu = [
         rating: 4.2,
         votes: 70,
         price: '₹50',
+        quantity: 1,
     },
     {
         id: 10,
@@ -79,6 +88,7 @@ const menu = [
         rating: 4.8,
         votes: 1340,
         price: '₹70',
+        quantity: 1,
     },
     {
         id: 11,
@@ -87,6 +97,7 @@ const menu = [
         rating: 4.7,
         votes: 1170,
         price: '₹60',
+        quantity: 1,
     },
     {
         id: 12,
@@ -95,6 +106,7 @@ const menu = [
         rating: 4.9,
         votes: 11170,
         price: '₹32',
+        quantity: 1,
     },
     {
         id: 13,
@@ -103,6 +115,7 @@ const menu = [
         rating: 4.6,
         votes: 151,
         price: '₹74',
+        quantity: 1,
     },
     {
         id: 14,
@@ -111,6 +124,7 @@ const menu = [
         rating: 4.3,
         votes: 670,
         price: '₹140',
+        quantity: 1,
     },
     {
         id: 15,
@@ -119,6 +133,7 @@ const menu = [
         rating: 4.4,
         votes: 532,
         price: '₹610',
+        quantity: 1,
     },
     {
         id: 16,
@@ -127,6 +142,7 @@ const menu = [
         rating: 4.8,
         votes: 5122,
         price: '₹160',
+        quantity: 1,
     },
     {
         id: 17,
@@ -135,6 +151,7 @@ const menu = [
         rating: 4.7,
         votes: 163,
         price: '₹104',
+        quantity: 1,
     },
     {
         id: 18,
@@ -143,6 +160,7 @@ const menu = [
         rating: 4.0,
         votes: 789,
         price: '₹76.50',
+        quantity: 1,
     },
     {
         id: 19,
@@ -151,6 +169,7 @@ const menu = [
         rating: 4.3,
         votes: 564,
         price: '₹85',
+        quantity: 1,
     },
     {
         id: 20,
@@ -159,6 +178,7 @@ const menu = [
         rating: 4.5,
         votes: 244,
         price: '₹85',
+        quantity: 1,
     },
     {
         id: 21,
@@ -167,6 +187,7 @@ const menu = [
         rating: 4.8,
         votes: 1564,
         price: '₹85',
+        quantity: 1,
     },
 
 ];

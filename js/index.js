@@ -5,3 +5,7 @@ button.addEventListener('click', e => {
     console.log('ÇLiked');
     window.location.href = '../pages/nearby.php';
 });
+
+if (localStorage.getItem('cartItems') === null) {
+    localStorage.setItem('cartItems', JSON.stringify([]));
+}
