@@ -27,8 +27,9 @@ class Cart {
                     <p class="total-votes">(${data.votes})</p>
                 </div>
                 <p class="price">${data.price}</p>
-                <button class="add">Add</button>
             </div>
+            <div class="quantity">${data.quantity}</div>
+            <div class="close">X</div>
         </div>
         <div class="line"></div>
             `;

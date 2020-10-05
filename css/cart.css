@@ -61,10 +61,10 @@
 
 .line {
   height: 1px;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 90%;
-  background-color: #1db6b61e;
+  background-color: #1db6b65e;
 }
 
 .menu img {
@@ -89,7 +89,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  width: 500px;
 }
 
 .menu .menu-details .menu-rating {

@@ -66,10 +66,6 @@ const addToCart = (id) => {
         prevCartItems.push(menu[id - 1]);
     }
 
-    // console.log(prevCartItems);
-
-    // prevCartItems.push(menu[id]);
-
     localStorage.setItem('cartItems', JSON.stringify
         (prevCartItems));
 }
