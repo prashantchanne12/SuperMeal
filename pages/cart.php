@@ -24,12 +24,6 @@
     </div>
 
     <div class="container">
-        <div class="cart-header">
-            <p>Item</p>
-            <p>Quantity</p>
-            <p>Price</p>
-        </div>
-
 
         <div class="cart-items">
 
@@ -37,8 +31,14 @@
 
         <div class="total">
             <h1>Total</h1>
-            <p class="total-price">₹ 1200</p>
+            <p class="total-price"></p>
         </div>
+
+        <form action="" method="POST">
+            <div class="button-container">
+                <button type="submit" class="order">Order Now</button>
+            </div>
+        </form>
     </div>
 
 

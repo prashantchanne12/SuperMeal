@@ -19,7 +19,7 @@ hotelsPage.addEventListener('click', e => {
 
 const gotoHotelPage = (currentHotel) => {
     localStorage.setItem('currentHotel', currentHotel);
-    window.location.replace('../pages/hotel.html');
+    window.location.href = '../pages/hotel.html';
 }
 
 class NearBy {

@@ -2,6 +2,7 @@ const hotelDetailsElement = document.querySelector('.hotel');
 const hotelMenuElement = document.querySelector('.menus');
 
 const cartCount = document.querySelector('.cart-count');
+const cartIcon = document.querySelector('.cart-icon');
 
 const foo = JSON.parse(localStorage.getItem('cartItems'));
 cartCount.innerHTML = foo.length.toString();
@@ -39,8 +40,19 @@ hotelDetailsElement.addEventListener('click', e => {
 
 cartCount.addEventListener('click', e => {
     e.preventDefault();
+    gotoCart();
+
+});
+
+cartIcon.addEventListener('click', e => {
+    e.preventDefault();
+    gotoCart();
+
+});
+
+const gotoCart = () => {
     window.location.href = '../pages/cart.php';
-})
+}
 
 hotelMenuElement.addEventListener('click', e => {
     e.preventDefault();

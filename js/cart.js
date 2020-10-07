@@ -5,8 +5,8 @@ const foo = JSON.parse(localStorage.getItem('cartItems'));
 cartCount.innerHTML = foo.length.toString();
 
 const prevCartItems = JSON.parse(localStorage.getItem('cartItems'));
-
 const cartItems = document.querySelector('.cart-items');
+const totalAmount = document.querySelector('.total-price');
 
 class Cart {
 
@@ -17,22 +17,23 @@ class Cart {
             const cartItem = document.createElement('div');
             cartItem.innerHTML =
                 `<div class="menu" id=${data.id}>
-                <div class="details">
-                    <img src="${data.img}"
-                        alt="" class="menu-img">
-                    <div class="menu-details">
-                        <h3 class="menu-title">${data.name}</h3>
-                        <div class="menu-rating">
-                            <i class="fa fa-star"></i>
-                            <p class="ratings">${data.rating}</p>
-                            <p class="total-votes">(${data.votes})</p>
+                    <section class="details">
+                        <div class="image-container">
+                            <img src="${data.img}" alt="" class="menu-img">
                         </div>
-                    </div>
+                        <div class="menu-details">
+                            <h3 class="menu-title">${data.name}</h3>
+                            <div class="menu-rating">
+                                <i class="fa fa-star"></i>
+                                <p class="ratings">${data.rating}</p>
+                                <p class="total-votes">(${data.votes})</p>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="quantity">${data.quantity}</div>
+                    <div class="price">₹ ${data.price}</div>
                 </div>
-                <div class="quantity">${data.quantity}</div>
-                <div class="price">${data.price}</div>
-            </div>
-            <div class="line"></div>
+                 <div class="line"></div>
 
 `;
 
@@ -41,8 +42,20 @@ class Cart {
         });
     }
 
+    calculateTotalAmount = () => {
+        const items = JSON.parse(localStorage.getItem('cartItems'));
+        let total = 0
+        items.forEach(cartItem => {
+            total += parseInt(cartItem.price);
+        });
+
+        totalAmount.innerHTML = `₹ ${total}`;
+    }
+
+
 
 }
 
 const cart = new Cart();
 cart.createCartItemCards();
+cart.calculateTotalAmount();

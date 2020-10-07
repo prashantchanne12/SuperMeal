@@ -18,7 +18,7 @@ hotelSearchRes.addEventListener('click', e => {
 
     if (e.target.classList.contains('name')) {
         localStorage.setItem('currentHotel', e.target.parentElement.parentElement.id);
-        window.location.replace('../pages/hotel.html');
+        window.location.href = '../pages/hotel.html';
     };
 });
 
@@ -96,26 +96,3 @@ const searchHotels = async (value, query) => {
     hotels.createSearchResultCards(restaurants);
 }
 
-/*
- <div class="hotel-card">
-                <img src="../images/landing-1.webp" alt="">
-                <div class="details">
-                    <div class="name">Hotel Maria</div>
-                    <div class="locality">Sion</div>
-                    <div class="address">40, Guru Kripa Building, Road 24, Near SIES College, Sion, Mumbai
-                    </div>
-                    <div class="cusions">
-                        <p>Top Cusions</p>
-                        <p>Fast Food, Street Food, South Indian, North Indian</p>
-                    </div>
-                    <div class="cost">
-                        <p>Cost For Two</p>
-                        <p>₹ 200</p>
-                    </div>
-                </div>
-                <div class="ratings">
-                    <p class="ratings">4.5</p>
-                    <p class="votes">(3400)</p>
-                </div>
-            </div>
-*/
