@@ -34,9 +34,10 @@
             <p class="total-price"></p>
         </div>
 
-        <form action="" method="POST">
+        <form action="../includes/order.php" method="POST">
+            <input type="hidden" name="cart" class="array" />
             <div class="button-container">
-                <button type="submit" class="order">Order Now</button>
+                <button type="submit" class="order" name="order-submit">Order Now</button>
             </div>
         </form>
     </div>

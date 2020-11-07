@@ -38,12 +38,21 @@ session_start();
 
             <?php
             if (isset($_SESSION['id'])) {
-                echo '<li><a href="./includes/logout.php">Log Out</a></li>';
+                echo '<li class="profile">Profile</li>';
             } else {
                 echo '<li><a href="./pages/login.php">Log In</a></li>';
             }
             ?>
         </ul>
+
+        <div class="profile-options">
+            <ul>
+                <li><a href="#">My Cart</a></li>
+                <li><a href="#">My Orders</a></li>
+                <li><a href="./includes/logout.php">Log Out</a></li>
+            </ul>
+        </div>
+
     </div>
 
     <div class="footer">

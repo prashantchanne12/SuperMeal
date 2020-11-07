@@ -8,6 +8,8 @@ const prevCartItems = JSON.parse(localStorage.getItem('cartItems'));
 const cartItems = document.querySelector('.cart-items');
 const totalAmount = document.querySelector('.total-price');
 
+const array = document.querySelector('.array');
+
 class Cart {
 
     createCartItemCards = () => {
@@ -49,8 +51,19 @@ class Cart {
             total += parseInt(cartItem.price);
         });
 
+        const productId = [];
+
+        items.forEach(item => {
+            productId.push(item.id);
+        });
+
+        console.log(productId);
+
+        array.value = productId;
+
         totalAmount.innerHTML = `₹ ${total}`;
     }
+
 
 
 

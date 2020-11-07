@@ -153,3 +153,36 @@ a {
     }
   }
 }
+
+.profile {
+  cursor: pointer;
+}
+
+.profile-options {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  width: 150px;
+  border: 1px solid #1db6b67e;
+  background-color: #fff;
+  border-radius: 4px;
+
+  a,
+  a:visited,
+  a:hover {
+    color: $primary-color;
+  }
+
+  li {
+    cursor: pointer;
+    text-align: center;
+    color: $primary-color;
+    font-weight: bold;
+    padding: 0.8rem 0.5rem;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 1px solid #1db6b62d;
+  }
+}

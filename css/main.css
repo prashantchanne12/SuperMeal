@@ -161,4 +161,37 @@ a {
   cursor: pointer;
   padding-left: 2rem;
 }
+
+.profile {
+  cursor: pointer;
+}
+
+.profile-options {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  width: 150px;
+  border: 1px solid #1db6b67e;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.profile-options a,
+.profile-options a:visited,
+.profile-options a:hover {
+  color: #1db6b6;
+}
+
+.profile-options li {
+  cursor: pointer;
+  text-align: center;
+  color: #1db6b6;
+  font-weight: bold;
+  padding: 0.8rem 0.5rem;
+}
+
+.profile-options li:not(:last-child) {
+  border-bottom: 1px solid #1db6b62d;
+}
 /*# sourceMappingURL=main.css.map */
