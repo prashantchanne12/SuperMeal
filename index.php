@@ -47,8 +47,8 @@ session_start();
 
         <div class="profile-options">
             <ul>
-                <li><a href="#">My Cart</a></li>
-                <li><a href="#">My Orders</a></li>
+                <li><a href="./pages/cart.php">My Cart</a></li>
+                <li><a href="./pages/order.php">My Orders</a></li>
                 <li><a href="./includes/logout.php">Log Out</a></li>
             </ul>
         </div>

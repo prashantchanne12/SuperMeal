@@ -36,6 +36,7 @@
 
         <form action="../includes/order.php" method="POST">
             <input type="hidden" name="cart" class="array" />
+            <input type="hidden" name="quantity" class="quantity" />
             <div class="button-container">
                 <button type="submit" class="order" name="order-submit">Order Now</button>
             </div>

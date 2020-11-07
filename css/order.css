@@ -1,0 +1,92 @@
+.profile {
+  cursor: pointer;
+}
+
+.profile-options {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 2rem;
+  width: 150px;
+  border: 1px solid #1db6b67e;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.profile-options a,
+.profile-options a:visited,
+.profile-options a:hover {
+  color: #1db6b6;
+}
+
+.profile-options li {
+  cursor: pointer;
+  text-align: center;
+  color: #1db6b6;
+  font-weight: bold;
+  padding: 0.8rem 0.5rem;
+}
+
+.profile-options li:not(:last-child) {
+  border-bottom: 1px solid #1db6b62d;
+}
+
+.order-wrapper {
+  padding-top: 5rem;
+}
+
+.menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .details {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menu-details {
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu .image-container img {
+  height: 130px;
+  width: 130px;
+  border-radius: 4px;
+}
+
+.menu .quantity,
+.menu .price {
+  width: 23%;
+}
+
+.line {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  height: 0.2px;
+  width: 100%;
+  background-color: #1db6b6;
+}
+/*# sourceMappingURL=order.css.map */

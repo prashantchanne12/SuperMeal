@@ -9,6 +9,7 @@ const cartItems = document.querySelector('.cart-items');
 const totalAmount = document.querySelector('.total-price');
 
 const array = document.querySelector('.array');
+const quantity = document.querySelector('.quantity');
 
 class Cart {
 
@@ -52,14 +53,15 @@ class Cart {
         });
 
         const productId = [];
+        const productCount = [];
 
         items.forEach(item => {
             productId.push(item.id);
+            productCount.push(item.quantity);
         });
 
-        console.log(productId);
-
         array.value = productId;
+        quantity.value = productCount;
 
         totalAmount.innerHTML = `₹ ${total}`;
     }
