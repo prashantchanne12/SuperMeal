@@ -11,15 +11,27 @@ const totalAmount = document.querySelector('.total-price');
 const array = document.querySelector('.array');
 const quantity = document.querySelector('.quantity');
 
+const orderNow = document.querySelector(".order");
+
+orderNow.addEventListener('click', event => {
+    localStorage.setItem('cartItems', JSON.stringify([]));
+});
+
 class Cart {
 
     createCartItemCards = () => {
         cartItems.innerHTML = '';
 
-        prevCartItems.forEach(data => {
-            const cartItem = document.createElement('div');
-            cartItem.innerHTML =
-                `<div class="menu" id=${data.id}>
+        if (prevCartItems.length === 0) {
+            cartItems.innerHTML = '<h1> Cart is empty </h1>';
+            orderNow.style.display = 'none';
+
+        } else {
+
+            prevCartItems.forEach(data => {
+                const cartItem = document.createElement('div');
+                cartItem.innerHTML =
+                    `<div class="menu" id=${data.id}>
                     <section class="details">
                         <div class="image-container">
                             <img src="${data.img}" alt="" class="menu-img">
@@ -27,7 +39,7 @@ class Cart {
                         <div class="menu-details">
                             <h3 class="menu-title">${data.name}</h3>
                             <div class="menu-rating">
-                                <i class="fa fa-star">✪</i>
+                                <i class="fa fa-star"></i>
                                 <p class="ratings">${data.rating}</p>
                                 <p class="total-votes">(${data.votes})</p>
                             </div>
@@ -40,9 +52,10 @@ class Cart {
 
 `;
 
-            cartItems.appendChild(cartItem);
+                cartItems.appendChild(cartItem);
 
-        });
+            });
+        }
     }
 
     calculateTotalAmount = () => {

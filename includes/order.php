@@ -22,9 +22,10 @@ if (isset($_POST['order-submit'])) {
         ";
 
         if (mysqli_query($conn, $sql)) {
-            echo "Inserted new Record!";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
     }
+
+    header("Location: ../pages/order.php");
 }

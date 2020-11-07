@@ -49,7 +49,6 @@ $result = mysqli_query($conn, $sql);
 
     <div class="container">
         <div class="order-wrapper">
-            <h1>Your Orders</h1>
 
             <?php
 
@@ -57,6 +56,7 @@ $result = mysqli_query($conn, $sql);
             $quantities = array();
 
             if (mysqli_num_rows($result) > 0) {
+                echo "<h1>Your Orders</h1>";
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     array_push($prods,  $row['productId']);
@@ -81,7 +81,7 @@ $result = mysqli_query($conn, $sql);
                                     <div class=menu-details>
                                         <h3 class=menu-title>" . $row["prod_name"] . "</h3>
                                         <div class=menu-rating>
-                                            <i class=fa fa-star style=color:blue;>✪</i>
+                                            <i class=fa fa-star style=color:royalblue;>☆</i>
                                             <p class=ratings>" . $row["rating"] . "</p>
                                             <p class=total-votes>( " . $row["votes"] . " )</p>
                                         </div>
