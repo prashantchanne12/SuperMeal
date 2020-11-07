@@ -17,6 +17,7 @@ $result = mysqli_query($conn, $sql);
     <title>Orders</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/order.css">
+
 </head>
 
 <body>
@@ -40,8 +41,8 @@ $result = mysqli_query($conn, $sql);
 
     <div class="profile-options">
         <ul>
-            <li><a href="./pages/cart.php">My Cart</a></li>
-            <li><a href="./pages/order.php">My Orders</a></li>
+            <li><a href="./cart.php">My Cart</a></li>
+            <li><a href="./order.php">My Orders</a></li>
             <li><a href="./includes/logout.php">Log Out</a></li>
         </ul>
     </div>
@@ -80,7 +81,7 @@ $result = mysqli_query($conn, $sql);
                                     <div class=menu-details>
                                         <h3 class=menu-title>" . $row["prod_name"] . "</h3>
                                         <div class=menu-rating>
-                                            <i class=fa fa-star></i>
+                                            <i class=fa fa-star style=color:blue;>✪</i>
                                             <p class=ratings>" . $row["rating"] . "</p>
                                             <p class=total-votes>( " . $row["votes"] . " )</p>
                                         </div>
@@ -103,6 +104,8 @@ $result = mysqli_query($conn, $sql);
 
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/7f1e1a2168.js" crossorigin="anonymous"></script>
 
     <script src="../js/order.js"></script>
 </body>

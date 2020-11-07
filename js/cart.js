@@ -27,7 +27,7 @@ class Cart {
                         <div class="menu-details">
                             <h3 class="menu-title">${data.name}</h3>
                             <div class="menu-rating">
-                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star">✪</i>
                                 <p class="ratings">${data.rating}</p>
                                 <p class="total-votes">(${data.votes})</p>
                             </div>
