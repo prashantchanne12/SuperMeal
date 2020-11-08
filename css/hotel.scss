@@ -162,3 +162,57 @@ $primary-color: #1db6b6;
     color: grey;
   }
 }
+
+// Tablets and Smaller
+@media (max-width: 800px) {
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  body {
+    background: #fff;
+  }
+
+  .hotel img {
+    width: 100%;
+    height: 250px;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .hotel-details {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+
+    .ratings {
+      display: none;
+    }
+  }
+
+  .location {
+    padding-left: 1rem;
+  }
+
+  .timing {
+    padding-top: 1.3rem;
+    padding-left: 0.5rem;
+  }
+
+  .menu {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .menu img {
+    height: 100px;
+    width: 100px;
+    border-radius: 0.6rem;
+  }
+
+  .menu-title {
+    font-size: 1rem;
+  }
+}
