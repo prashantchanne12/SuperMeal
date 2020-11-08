@@ -68,3 +68,18 @@ $primary-color: #1db6b6;
     }
   }
 }
+
+// Tablets and Smaller
+@media (max-width: 800px) {
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  body {
+    background: #fff;
+  }
+
+  .login-form {
+    width: 350px;
+  }
+}

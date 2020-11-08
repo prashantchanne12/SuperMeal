@@ -85,4 +85,13 @@
   color: #1db6b6;
   font-weight: bold;
 }
+
+@media (max-width: 500px) {
+  body {
+    background: #fff;
+  }
+  .login-form {
+    width: 350px;
+  }
+}
 /*# sourceMappingURL=login.css.map */
