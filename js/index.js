@@ -6,8 +6,7 @@ profileOptions.style.display === "none"
 
 button.addEventListener('click', e => {
     e.preventDefault();
-    console.log('ÇLiked');
-    window.location.href = '../pages/nearby.php';
+    window.location.href = 'pages/nearby.php';
 });
 
 if (localStorage.getItem('cartItems') === null) {

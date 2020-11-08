@@ -153,4 +153,23 @@
   background-color: #1db6b6;
   color: #fff;
 }
+
+@media (max-width: 500px) {
+  .hotels {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .hotels .hotel-card {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hotels .hotel-card img {
+    width: 270px;
+  }
+  .hotels .hotel-card .view {
+    bottom: 0.4rem;
+    right: 0.4rem;
+  }
+}
 /*# sourceMappingURL=nearby.css.map */

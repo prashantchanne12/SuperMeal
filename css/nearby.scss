@@ -122,3 +122,29 @@ $primary-color: #1db6b6;
     }
   }
 }
+
+// Tablets and Smaller
+@media (max-width: 800px) {
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  .hotels {
+    grid-template-columns: 1fr;
+
+    .hotel-card {
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      img {
+        width: 270px;
+      }
+
+      .view {
+        bottom: 0.4rem;
+        right: 0.4rem;
+      }
+    }
+  }
+}
