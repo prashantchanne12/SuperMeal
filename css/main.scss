@@ -186,3 +186,53 @@ a {
     border-bottom: 1px solid #1db6b62d;
   }
 }
+
+// Tablets and Smaller
+@media (max-width: 800px) {
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  body {
+    background-color: #e7f7f7;
+  }
+
+  .landing {
+    display: none;
+  }
+
+  .navbar {
+    .nav-title a {
+      display: none;
+    }
+
+    .links {
+      width: 100%;
+    }
+  }
+
+  .text {
+    left: 2rem;
+    top: 25vh;
+
+    .title {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+
+    .subtitle {
+      padding-top: 2rem;
+    }
+
+    button {
+      margin-top: 2.8rem;
+    }
+  }
+
+  .footer {
+    .logos {
+      left: 0rem;
+      padding-top: 0rem;
+    }
+  }
+}

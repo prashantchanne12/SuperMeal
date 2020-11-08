@@ -194,4 +194,37 @@ a {
 .profile-options li:not(:last-child) {
   border-bottom: 1px solid #1db6b62d;
 }
+
+@media (max-width: 500px) {
+  body {
+    background-color: #e7f7f7;
+  }
+  .landing {
+    display: none;
+  }
+  .navbar .nav-title a {
+    display: none;
+  }
+  .navbar .links {
+    width: 100%;
+  }
+  .text {
+    left: 2rem;
+    top: 25vh;
+  }
+  .text .title {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .text .subtitle {
+    padding-top: 2rem;
+  }
+  .text button {
+    margin-top: 2.8rem;
+  }
+  .footer .logos {
+    left: 0rem;
+    padding-top: 0rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
