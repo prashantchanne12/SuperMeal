@@ -145,3 +145,92 @@ $primary-color: #1db6b6;
     }
   }
 }
+
+// Tablets and Smaller
+@media (max-width: 800px) {
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  body {
+    background-color: #fff;
+  }
+
+  .wrapper {
+    #country {
+      margin-left: 0.6rem;
+    }
+
+    form {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .hotel-search {
+    .hotel-card {
+      margin-top: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+
+      img {
+        height: 240px;
+        width: 300px;
+        margin: 0 auto;
+        border-radius: 1rem;
+      }
+
+      .details {
+        padding-left: 1rem;
+
+        .name {
+          cursor: pointer;
+          padding-top: 0.5rem;
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: $primary-color;
+        }
+
+        .locality {
+          padding-top: 0.5rem;
+          font-size: 0.95rem;
+          color: grey;
+        }
+
+        .address {
+          padding-top: 0.5rem;
+          font-size: 0.9rem;
+          color: #444;
+        }
+
+        .cusions {
+          margin-top: 0.9rem;
+        }
+
+        .cusions,
+        .cost {
+          padding-top: 0.7rem;
+          display: flex;
+
+          p:first-child {
+            font-weight: bold;
+          }
+
+          p:nth-child(2) {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+
+      .ratings {
+        display: none;
+      }
+    }
+  }
+}

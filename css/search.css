@@ -169,4 +169,80 @@
   font-size: 0.9rem;
   color: grey;
 }
+
+@media (max-width: 500px) {
+  body {
+    background-color: #fff;
+  }
+  .wrapper #country {
+    margin-left: 0.6rem;
+  }
+  .wrapper form {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .wrapper form input {
+    width: 100%;
+  }
+  .hotel-search .hotel-card {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel-search .hotel-card img {
+    height: 240px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
+  .hotel-search .hotel-card .details {
+    padding-left: 1rem;
+  }
+  .hotel-search .hotel-card .details .name {
+    cursor: pointer;
+    padding-top: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1db6b6;
+  }
+  .hotel-search .hotel-card .details .locality {
+    padding-top: 0.5rem;
+    font-size: 0.95rem;
+    color: grey;
+  }
+  .hotel-search .hotel-card .details .address {
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  .hotel-search .hotel-card .details .cusions {
+    margin-top: 0.9rem;
+  }
+  .hotel-search .hotel-card .details .cusions,
+  .hotel-search .hotel-card .details .cost {
+    padding-top: 0.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hotel-search .hotel-card .details .cusions p:first-child,
+  .hotel-search .hotel-card .details .cost p:first-child {
+    font-weight: bold;
+  }
+  .hotel-search .hotel-card .details .cusions p:nth-child(2),
+  .hotel-search .hotel-card .details .cost p:nth-child(2) {
+    padding-left: 0.5rem;
+  }
+  .hotel-search .hotel-card .ratings {
+    display: none;
+  }
+}
 /*# sourceMappingURL=search.css.map */
