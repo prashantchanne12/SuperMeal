@@ -10,22 +10,29 @@ if (isset($_POST['order-submit'])) {
     $quantities = $_POST['quantity'];
     $userId = $_SESSION['id'];
 
-    $integerIDs = array_map('intval', explode(',', $cartIds));
-    $quantityIntegers = array_map('intval', explode(',', $quantities));
+    if (isset($_SESSION['id'])) {
 
 
 
-    foreach ($integerIDs as $index => $id) {
+        $integerIDs = array_map('intval', explode(',', $cartIds));
+        $quantityIntegers = array_map('intval', explode(',', $quantities));
 
-        $sql = "INSERT INTO orders (userId, productId, quantity) 
+
+
+        foreach ($integerIDs as $index => $id) {
+
+            $sql = "INSERT INTO orders (userId, productId, quantity) 
                 VALUES ($userId , $id, $quantityIntegers[$index] )
         ";
 
-        if (mysqli_query($conn, $sql)) {
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            if (mysqli_query($conn, $sql)) {
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
         }
-    }
 
-    header("Location: ../pages/order.php");
+        header("Location: ../pages/order.php");
+    } else {
+        header("Location: ../pages/login.php");
+    }
 }
